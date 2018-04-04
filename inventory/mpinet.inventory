@@ -1,0 +1,13 @@
+[control]
+mallen-pi-c
+
+[load_balancer]
+mallen-pi-d
+
+[app_server]
+mallen-pi-e
+mallen-pi-f
+
+[db_server]
+mallen-pi-a
+mallen-pi-b
