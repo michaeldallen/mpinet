@@ -1,13 +1,19 @@
-[control]
+[mw-control]
 mallen-pi-d
 
-[load_balancer]
+[mw-load_balancer]
 mallen-pi-c
 
-[app_server]
+[mw-app_server]
 mallen-pi-e
 mallen-pi-f
 
-[db_server]
+[mw-db_server]
 mallen-pi-a
 mallen-pi-b
+
+[mw:children]
+mw-control
+mw-load_balancer
+mw-app_server
+mw-db_server
