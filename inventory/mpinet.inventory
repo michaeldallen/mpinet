@@ -1,8 +1,8 @@
 [control]
-mallen-pi-c
+mallen-pi-d
 
 [load_balancer]
-mallen-pi-d
+mallen-pi-c
 
 [app_server]
 mallen-pi-e
