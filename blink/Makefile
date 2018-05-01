@@ -1,5 +1,5 @@
 blink :
-	docker run --rm -it --privileged blink python blink.py
+	docker run --rm -it --privileged blink
 
 shell :
 	docker run --rm -it --privileged blink /bin/sh

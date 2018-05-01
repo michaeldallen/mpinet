@@ -18,3 +18,5 @@ RUN pip install \
 WORKDIR /root/blink
 
 COPY blink.py .
+
+ENTRYPOINT ["python", "blink.py"]
