@@ -13,10 +13,9 @@ RUN pip install --upgrade pip
 
 RUN pip install \
     RPi.GPIO \
+    ipython \
     readchar
 
 WORKDIR /root/blink
 
-COPY blink.py .
-
-ENTRYPOINT ["python", "blink.py"]
+COPY src/* src/
