@@ -1,6 +1,3 @@
-clean :
-	find * -name \*~ -print -delete
-
 all : build blink
 
 blink :
@@ -11,4 +8,7 @@ shell :
 
 build :
 	docker build --tag blink .
+
+clean :
+	find * -name \*~ -print -delete
 
