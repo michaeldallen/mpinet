@@ -42,7 +42,7 @@ RUN \
 
 
 WORKDIR \
-        /opt
+        /opt/mpinet
 
 
 COPY \

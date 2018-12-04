@@ -39,6 +39,6 @@ docker.run :
 	docker run --rm -it --privileged ${IAM} /bin/bash
 
 docker.srun : 
-	echo docker run --rm -it --privileged -v $$(dirname $$SSH_AUTH_SOCK):$$(dirname $$SSH_AUTH_SOCK) -e SSH_AUTH_SOCK=$$SSH_AUTH_SOCK mpinet-controller /bin/bash
+	docker run --rm -it --privileged -v $$(dirname $$SSH_AUTH_SOCK):$$(dirname $$SSH_AUTH_SOCK) -e SSH_AUTH_SOCK=$$SSH_AUTH_SOCK mpinet-controller /bin/bash
 
 #EOF
