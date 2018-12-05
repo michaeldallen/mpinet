@@ -1,4 +1,4 @@
 default :
-	ansible --inventory=inventory-mpinet -m ping --user=root all
+	ansible --inventory=inventory/mpinet.inventory -m ping --user=root all
 
 
