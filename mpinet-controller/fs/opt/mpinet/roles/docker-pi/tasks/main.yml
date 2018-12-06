@@ -1,0 +1,12 @@
+---
+- name: Check for Docker installed
+  command: docker -v
+  register: have_docker
+  ignore_errors: True
+  changed_when: False
+
+- name: Install Docker
+  when: have_docker is failed
+  include: install_docker.yml
+
+

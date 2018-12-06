@@ -13,11 +13,14 @@ RUN \
 
 RUN \
         apt-get update && apt-get --assume-yes install \
+                \
                 apt-utils \
+                bsdmainutils\
                 curl \
                 eject \
                 file \
                 hdparm \
+                jq \
                 pv \
                 python \
                 python-pip \
@@ -26,7 +29,6 @@ RUN \
                 udev \
                 unzip \
                 usbutils \
-		jq \
                 util-linux \
                 \
                 cowsay

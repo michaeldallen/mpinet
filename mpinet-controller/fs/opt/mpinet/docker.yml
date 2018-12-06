@@ -1,0 +1,6 @@
+---
+
+- hosts: all !bullpen
+  tasks:
+  - import_role:
+      name: docker-pi
