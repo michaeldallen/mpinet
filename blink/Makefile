@@ -1,7 +1,7 @@
 
 LOG    = 2>&1 | tee -a log.$(shell date +%Y.%m.%d_%H.%M.%S).$@
 DATE   = date | sed -n '/\(.*\)/ { h ; 's/./-/g' p ; x ; p ; x ; p }'
-IAM   := blink
+IAM   := piblink
 
 SHELL := /bin/bash
 

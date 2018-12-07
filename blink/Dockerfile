@@ -19,3 +19,5 @@ RUN pip install \
 WORKDIR /root/blink
 
 COPY src/* src/
+
+CMD ["python", "src/blink2.py"]
