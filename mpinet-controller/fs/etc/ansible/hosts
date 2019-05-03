@@ -1,5 +1,5 @@
 [natick]
-mallen-pi-a
+access_point ansible_host=mallen-pi-a.dhcp.mathworks.com
 mallen-pi-b
 mallen-pi-c
 mallen-pi-e

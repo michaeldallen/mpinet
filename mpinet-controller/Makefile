@@ -2,6 +2,8 @@ LOG    = 2>&1 | tee -a log.$(shell date +%Y.%m.%d_%H.%M.%S).$@
 DATE   = date | sed -n '/\(.*\)/ { h ; 's/./-/g' p ; x ; p ; x ; p }'
 IAM   := mpinet-controller
 
+INDENT := 2>&1 | sed 's/^/    /'
+
 
 SHELL := /bin/bash
 
@@ -27,6 +29,11 @@ make.targets :
 	| sed 's/^/    make    /' \
 	| sed 's/make    maven.release/make -n maven.release/' \
 	| sort
+
+diag :
+	@echo "untracked files that do not exist in .gitignore"
+	git ls-files . --exclude-standard --others ${INDENT}
+
 
 
 make.clean : 
