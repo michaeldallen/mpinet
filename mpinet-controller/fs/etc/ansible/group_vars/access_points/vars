@@ -1,0 +1,6 @@
+---
+packages:
+  - dnsmasq
+  - hostapd
+
+
