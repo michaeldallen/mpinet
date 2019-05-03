@@ -6,8 +6,14 @@ ifdef INVENTORY_LIMIT
 OPTION_LIMIT := --limit=${INVENTORY_LIMIT}
 endif
 
+%.natick :
+	env INVENTORY_LIMIT=natick $(MAKE) $(basename $@ .natick)
+
+%.brookline :
+	env INVENTORY_LIMIT=natick $(MAKE) $(basename $@ .brookline)
+
 do.ping :
-	ansible ${INVENTORY} -m ping --user=root all ${OPTION_LIMIT}
+	ansible-playbook ${INVENTORY} ping.yml ${OPTION_LIMIT}
 
 do.apt :
 	ansible-playbook ${INVENTORY} apt.yml ${OPTION_LIMIT}
