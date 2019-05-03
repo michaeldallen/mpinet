@@ -19,5 +19,8 @@ do.ping :
 do.apt :
 	ansible-playbook ${INVENTORY} apt.yml ${OPTION_LIMIT}
 
+do.access_point :
+	ansible-playbook ${INVENTORY} access_point.yml ${OPTION_LIMIT}
+
 do.docker :
 	ansible-playbook ${INVENTORY} docker.yml ${OPTION_LIMIT}

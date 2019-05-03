@@ -1,0 +1,6 @@
+---
+
+- hosts: access_points
+  tasks:
+  - import_role:
+      name: access_point

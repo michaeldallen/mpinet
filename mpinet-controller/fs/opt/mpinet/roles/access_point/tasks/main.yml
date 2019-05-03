@@ -1,0 +1,11 @@
+---
+- name: Install Access Point Packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - dnsmasq
+    - hostapd
+
+
+      

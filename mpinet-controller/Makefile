@@ -30,14 +30,14 @@ make.targets :
 	| sed 's/make    maven.release/make -n maven.release/' \
 	| sort
 
-diag :
+make.diag :
 	@echo "untracked files that do not exist in .gitignore"
 	git ls-files . --exclude-standard --others ${INDENT}
 
 
 
 make.clean : 
-	rm -vf *~
+	@find * -name '*~' -exec rm -v {} \;
 
 docker.build :
 	docker build --tag ${IAM} .

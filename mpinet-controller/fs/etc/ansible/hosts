@@ -1,13 +1,34 @@
-[natick]
-access_point ansible_host=mallen-pi-a.dhcp.mathworks.com
+[natick_access_points]
+access_point-natick ansible_host=mallen-pi-a.dhcp.mathworks.com
+
+[natick_pool]
 mallen-pi-b
 mallen-pi-c
 mallen-pi-e
 
-[brookline]
+[natick:children]
+natick_access_points
+natick_pool
+
+
+
+[brookline_access_points]
+
+[brookline_pool]
 mallen-pi-f
+
+[brookline:children]
+brookline_access_points
+brookline_pool
+
+
 
 [bullpen]
 mallen-pi-d
 
 
+
+
+[access_points:children]
+natick_access_points
+brookline_access_points
