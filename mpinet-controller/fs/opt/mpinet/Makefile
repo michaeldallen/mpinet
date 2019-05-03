@@ -1,6 +1,7 @@
 include makelib
 
-INVENTORY := --inventory=inventory/mpinet.inventory
+INVENTORY := 
+#--inventory=inventory/mpinet.inventory
 
 ifdef INVENTORY_LIMIT
 OPTION_LIMIT := --limit=${INVENTORY_LIMIT}
