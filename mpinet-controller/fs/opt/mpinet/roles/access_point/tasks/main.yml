@@ -2,10 +2,11 @@
 - name: Install Access Point Packages
   apt:
     name: "{{ packages }}"
-  vars:
-    packages:
-    - dnsmasq
-    - hostapd
 
+- name: Safety First!
+  service:
+    name: "{{ item }}"
+    state: stopped
+    enabled: no
+  with_items: "{{ packages }}"
 
-      
