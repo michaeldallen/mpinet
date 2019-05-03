@@ -20,6 +20,8 @@ RUN \
                 eject \
                 file \
                 hdparm \
+                libffi-dev \
+                libssl-dev \
                 jq \
                 pv \
                 python \
