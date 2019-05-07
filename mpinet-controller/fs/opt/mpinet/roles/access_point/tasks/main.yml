@@ -3,10 +3,50 @@
   apt:
     name: "{{ packages }}"
 
+
 - name: Safety First!
-  service:
-    name: "{{ item }}"
+  systemd:
+    unit: "{{ item }}"
     state: stopped
     enabled: no
   with_items: "{{ packages }}"
+
+
+- name: configure NAT-side Access Point static IP
+  blockinfile:
+    path: /etc/dhcpcd.conf
+    block: |
+      interface wlan0
+          static ip_address=192.168.100.100/24
+          nohook wpa_supplicant
+
+
+- name: restart dhcpcd with wlan0 provisioned 
+  systemd:
+    unit: dhcpcd
+    state: restarted
+
+
+- name: configure dnsmasq
+  blockinfile:
+    path: /etc/dnsmasq.conf
+    block: |
+      interface=wlan0
+      dhcp-range=192.168.100.150,192.168.100.199,255.255.255.0,24h
+
+
+- name: restart dnsmasq with wlan0 provisioned 
+  systemd:
+    unit: dnsmasq
+    state: restarted
+    enabled: yes
+
+
+- name: Safety First!
+  systemd:
+    unit: "{{ item }}"
+    state: stopped
+    enabled: no
+  with_items: "{{ packages }}"
+
 

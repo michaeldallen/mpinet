@@ -11,7 +11,7 @@ endif
 	env INVENTORY_LIMIT=natick $(MAKE) $(basename $@ .natick)
 
 %.brookline :
-	env INVENTORY_LIMIT=natick $(MAKE) $(basename $@ .brookline)
+	env INVENTORY_LIMIT=brookline $(MAKE) $(basename $@ .brookline)
 
 do.ping :
 	ansible-playbook ${INVENTORY} ping.yml ${OPTION_LIMIT}
