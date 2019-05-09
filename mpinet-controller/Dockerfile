@@ -14,15 +14,16 @@ RUN \
 RUN \
         apt-get update && apt-get --assume-yes install \
                 \
+		iputils-ping \
                 apt-utils \
                 bsdmainutils\
                 curl \
                 eject \
                 file \
                 hdparm \
+                jq \
                 libffi-dev \
                 libssl-dev \
-                jq \
                 pv \
                 python \
                 python-pip \
