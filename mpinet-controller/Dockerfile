@@ -14,7 +14,7 @@ RUN \
 RUN \
         apt-get update && apt-get --assume-yes install \
                 \
-		iputils-ping \
+                iputils-ping \
                 apt-utils \
                 bsdmainutils\
                 curl \
