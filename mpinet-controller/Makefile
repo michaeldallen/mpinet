@@ -14,7 +14,7 @@ make.default : make.vars make.targets
 make.vars :
 	@echo "available variables"
 	@$(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null \
-	| awk '/^# makefile/,/^[^#]/ { if ($$1 !~ "^[#.]") {print $$$$1} }' \
+	| awk '/^# makefile/,/^[^#]/ { if ($$1 !~ "^[#.]") {print $$1} }' \
 	| sed -e 's/ := / !:= /' -e 's/ = / ! = /' \
 	| column -t -s'!' \
 	| sed 's/  \([:=]\)/\1/' \
