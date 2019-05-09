@@ -21,6 +21,7 @@ RUN \
                 eject \
                 file \
                 hdparm \
+                iputils-ping \
                 jq \
                 libffi-dev \
                 libssl-dev \
