@@ -20,9 +20,10 @@ RUN \
                 eject \
                 file \
                 hdparm \
+                iputils-ping \
+                jq \
                 libffi-dev \
                 libssl-dev \
-                jq \
                 pv \
                 python \
                 python-pip \
