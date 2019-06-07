@@ -14,7 +14,6 @@ RUN \
 RUN \
         apt-get update && apt-get --assume-yes install \
                 \
-                iputils-ping \
                 apt-utils \
                 bsdmainutils\
                 curl \
@@ -22,9 +21,11 @@ RUN \
                 file \
                 hdparm \
                 iputils-ping \
+                iputils-ping \
                 jq \
                 libffi-dev \
                 libssl-dev \
+                openssh-client \
                 pv \
                 python \
                 python-pip \
@@ -34,10 +35,11 @@ RUN \
                 unzip \
                 usbutils \
                 util-linux \
+                vim \
                 \
                 cowsay
 
-RUN apt-get --assume-yes install openssh-client
+RUN apt-get --assume-yes install 
 
 RUN \
         pip install --upgrade pip
